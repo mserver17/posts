@@ -10,20 +10,21 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .btn{
   padding: 10px;
-  background-color: #1b4f75;
-  color: #fff;
+  background-color: #788cff;
+  color: #ffffff;
   align-self: flex-end;
-  border: 2px solid #286d9e ;
+  border: 2px solid #9caaff ;
   border-radius: 10px; 
   transition: transform 0.3s ease;
-}
-.btn:hover{
-  background-color: #0a2e48;
+
+  &:hover{
+  background-color: #6179ff;
+  color: #ffffff;
   transform: translateY(-3px);
-
-
+  }
 }
+
 </style>

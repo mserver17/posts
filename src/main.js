@@ -1,15 +1,18 @@
-import './assets/style.css'; 
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from '@/router/router'
-import MyButton from '@/components/UI/MyButton.vue';
+import './assets/_index.scss'; 
+import components from '@/components/UI'
+
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 const app = createApp(App);
-
-// Глобальная регистрация компонента
-app.component('MyButton', MyButton);
-
+components.forEach(component => {
+    app.component(component.name, component);
+})
 app.use(router);
 
 app.mount('#app')

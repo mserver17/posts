@@ -3,7 +3,10 @@
         <h3>Список постов</h3>
     <post-item
       v-for="post in posts"
-      :post="post" />
+      :post="post"
+      :key="post.id" 
+      @remove="handleRemove"
+      />
     
     </div>
 </template>
@@ -20,10 +23,15 @@ export default{
             type: Array,
             required: true
         }
+    },
+    methods: {
+    handleRemove(post) {
+      this.$emit('remove', post);
     }
+  }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

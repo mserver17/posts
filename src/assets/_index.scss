@@ -1,0 +1,163 @@
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+html, body{ 
+    margin: 0px;
+    padding: 0px;
+}
+#app{
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    & conteiner{
+        padding: 0;
+    }
+    
+    header {
+    background-color: #c6cfff;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    max-height: 40px;
+    position: relative;
+    justify-content:flex-end;
+
+    & div{
+        background-color: #c6cfff;
+        position: absolute;
+        z-index: 2;
+        display:flex;
+        border-radius: 10px;      
+        height: 100%;
+        padding-top: 7px;
+
+        & a{
+            color: #205279;
+            margin-left: 10px;
+
+            &:hover{
+                color: rgb(0, 203, 203);
+            }
+        }
+    }
+    
+
+    }
+    .conteiner{
+        display: flex;
+        flex: 1;
+        align-items: stretch;
+        overflow: hidden;
+        width: 100%;
+        flex-direction: row;
+        max-width: 1840px;
+        margin: 0 auto;
+
+        // flex-direction: column;
+        align-items: self-start;
+        justify-content: center;
+        height: 100%;
+        // width: 100%;
+        padding: 20px;
+
+        .nav__wrapper{
+            flex: 1 1 200px;
+            background-color: #788cff;
+            padding: 10px;
+            // width: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius:  0px 30px 30px 0px;
+            z-index: 3;
+
+
+            position: fixed; /* Fixed positioning */
+            top: 0; /* Align to the top of the viewport */
+            left: 0; /* Align to the left of the viewport */
+            bottom: 0; /* Extend to the bottom of the viewport */
+            overflow: auto; /* Add scroll if content overflows */
+
+            .logo__block{
+                width: 20vb;
+                height: 19vh;
+                margin-bottom: 40px;
+    
+                .logo{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            nav{
+                text-align: start;
+                display: flex;
+                flex-direction: column;
+                border-radius: 10px;
+                padding: 10px;
+
+                &:hover{
+                    background-color: #8c9bff;
+                    // border: 0.4px solid hwb(206 45% 0%);
+                }
+
+                .router-link{
+                    color: #fff;
+                    font-family: Arial, sans-serif;
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                    text-decoration: none;
+                        
+                    &:hover{
+                        color: rgb(0, 132, 132);
+                    }
+                    span{
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+        main {
+            flex: 1 1 65%;
+            width: 90%;
+            overflow: auto;
+            z-index: 0;
+            &.Posts, &.AboutUs, &.Authorization{
+                margin-left: 220px;
+            }
+            }
+        &aside {
+            flex: 0 0 30px;
+            width: 300px;
+            max-width: 25%;
+            overflow: auto;
+            background-color:#e7eafe;
+            padding: 30px;
+        }
+    }
+    footer {
+    background-color: #c6cfff;
+    color: #205279;;
+    padding: 2px;
+    max-height: 30px;
+    text-align: center;
+    }
+}
+
+
