@@ -4,6 +4,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from '@/router/router'
 import './assets/_index.scss'; 
+import './assets/_importer.scss'; 
+
 import components from '@/components/UI'
 
 import '@fortawesome/fontawesome-free/css/all.css';

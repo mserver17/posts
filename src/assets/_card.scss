@@ -1,0 +1,70 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+
+
+.cards__wrapper{
+        width: auto;
+        height: 100vh;
+        margin-left: 10px;
+        margin-top: 20px;
+        //  @extend %fullsize;
+
+        // display: flex;
+        // justify-content: center; 
+        // align-items: center;
+        // flex-wrap: wrap;
+        @include d-flex(center,center ,wrap);
+
+        .card {
+          padding: 0.5em;
+          width: 300px;
+          margin: 10px;
+          background-color: map-get($colors, "asideColor");
+
+
+          border: {
+              width: 2px;
+              style: solid;
+              color: map-get($colors, "navBarColor");
+              radius: 8px
+          };
+    
+          &__title {
+              margin: 0.3em;
+              text-transform: uppercase;
+              color: map-get($colors, "orange");
+
+
+              &:hover{
+                  cursor: pointer;
+                  color: #9808ff;
+              }
+          }
+          &__desc {
+              margin: 0.5em;
+              text-align: justify;
+              color: rgb(0, 132, 132);
+
+          }
+          &__captions {
+              margin: 0.5em;
+              font-style: italic;
+              color: rgb(6, 141, 141);
+          }
+          &:hover {
+              background-color: map-get($colors, "hoverCardColor");
+              cursor: pointer;
+
+          }
+                @media (max-width: md){
+                    &{
+                        flex-grow: 1;
+
+                        &__title{
+                            color: map-get($colors, "navBarColor");
+                        }
+                    }
+                }
+        }
+  }

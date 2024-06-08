@@ -6,13 +6,12 @@
         <video class="call__icon" preload="none" style="background: transparent  url('https://cdn-icons-png.flaticon.com/512/6172/6172514.png') 50% 50% / fit no-repeat;" autoplay="autoplay" loop="true" muted="muted" playsinline="">
         <source src="https://cdn-icons-mp4.flaticon.com/512/6172/6172514.mp4" type="video/mp4">
         </video>
-        <a href="tel:+79178149841">+79178149841</a>
+        <a class="tel" href="tel:+79178149841">+7917 814 98 41</a>
         <router-link 
-          class="rout_link" 
+          class="rout_user" 
           to="/authorization"
         >
           <i class="fa-regular fa-user fa-lg"></i>
-          <span>Войти или Регистрация</span>
         </router-link>
       </div>
       
@@ -52,10 +51,10 @@ export default {
 
 <style lang="scss">
 .contact-info{
-  .rout_link{
-    span{
-      margin-left: 8px;
-    }
+
+  a{
+    text-decoration: none;
+    padding-top: 7px;
   }
   &.call__icon{
       width: 22px;

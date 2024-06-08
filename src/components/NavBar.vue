@@ -12,6 +12,10 @@
               <i class="fa-regular fa-file-alt fa-lg"></i>
               <span>Страница постов</span>
             </router-link>
+            <router-link class="router-link" to="/create-new-post">
+              <i class="fa-regular fa-file-alt fa-lg"></i>
+              <span>Написать пост</span>
+            </router-link>
             <router-link class="router-link" to="/settings">
               <i class="fas fa-cog fa-lg"></i>
               <span>Настройки</span> 
@@ -28,5 +32,7 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+ @use '/src/assets/variables' as *;
+  @use '/src/assets/mixins' as *;
 
 </style>

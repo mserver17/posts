@@ -2,7 +2,7 @@
     <!-- <div class="contr"> -->
     <div class="container__about">
         <div class="banner-list">
-            <video src="/src/assets/images/banner.mp4" class="banner" autoplay loop muted ></video>
+            <video src="/src/assets/images/interactive-banner.mp4" class="banner" autoplay loop muted ></video>
         </div>
         <h1>About Us</h1>
     <p>Welcome to our IT information platform, where you can read posts on various IT topics.</p>
@@ -104,8 +104,8 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px;
-        max-width: 1200px;
+        padding: 5px;
+        max-width: 1300px;
         margin: 0 auto;
 
         .h1, h2 {
@@ -151,7 +151,7 @@ export default {
             overflow: hidden;
 
             .banner{
-                width:95%;
+                width:97%;
                 height: auto;
                 display: block;
                 object-fit: cover;
@@ -171,9 +171,5 @@ export default {
             }
         }
     }
-//     aside-bar{
-
-//     }
-// }
   </style>
   

@@ -40,12 +40,16 @@
   </script>
   
   <style scoped lang="scss">
+  @use '/src/assets/variables' as *;
+  @use '/src/assets/mixins' as *;
   .aside {
-    background-color: #e7eafe;
-    flex: 1 1 300px; /* Fixed width */
-    max-width: 300px; /* Limit maximum width */
+    background-color: map-get($colors, "asideColor");
+    flex: 1 1 300px;
+    max-width: 300px; 
     padding: 20px;
     box-sizing: border-box;
+    border-radius: 20px;
+    overflow: auto;
   
     &__nav {
       padding: 0;
