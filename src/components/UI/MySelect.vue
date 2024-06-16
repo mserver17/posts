@@ -47,18 +47,17 @@ select {
     transition: border-color 0.3s, box-shadow 0.3s;
 
     &:hover {
-        border-color: #5566ff;
+        border-color: #74a5ff;
     }
-
     &:focus {
-        border-color: #3344ff;
-        box-shadow: 0 0 5px rgba(51, 68, 255, 0.5);
+        border-color: #74a7ff;
+        box-shadow: 0 0 8px #74a5ff;
     }
-}
 
-option {
-    padding: 5px;
-    font-family: "Arial", sans-serif;
+    option {
+        padding: 5px;
+        font-family: "Arial", sans-serif;
+    }
 }
 </style>
 

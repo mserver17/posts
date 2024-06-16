@@ -54,6 +54,7 @@
             </div>
         </div>
             <my-input 
+              v-focus
               v-model="post.title"
               class="form__input form-control" 
               type="text" 
@@ -71,7 +72,6 @@
               style="align-self: flex-end; margin-top: 15px;"
                 class="btn"
                 type="submit" 
-                @click="handleSubmit"
                 >Создать пост
               </my-button>
             </div>
@@ -117,7 +117,7 @@ export default {
           direction: '',
           intended: '',
           stack:'',
-          createdAt: ''
+          createdAt: '',
         };
       } else {
         alert('Пожалуйста, заполните все поля формы.');
@@ -146,7 +146,7 @@ export default {
   margin-bottom: 40px;
 
   h4{
-    color: #7d88ff;
+    color: map-get($colors, 'orange' )
   }
 }
 .form{
@@ -163,6 +163,10 @@ export default {
       color: map-get($colors, $key:"navBarColor");
       margin-right: 5px;
 
+      label{
+        color: map-get($colors, 'orange' )
+      }
+
       & select{
         border: 1px solid #788cff
       }
@@ -173,7 +177,7 @@ export default {
     outline: none;
     width: 80%;
     background-color: #ffffff;
-    color: #788cff;
+    color: #011fca;
     border: 1px solid #b9c1ff;
     border-radius: 7px;
     padding: 10px 15px;

@@ -28,7 +28,9 @@
         <main :class="$route.name">
           <router-view></router-view>
         </main>
-        <aside-bar></aside-bar>
+        <aside class="aside__wrapper">
+          <aside-bar></aside-bar>
+        </aside>
     </div>
         <footer>
           <p>Powered by Postim</p>

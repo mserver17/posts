@@ -65,17 +65,23 @@ export default {
                 }
             .inscriptions{
                 z-index: 2;
-                background-color: rgb(255, 225, 127);
-                // background-color: map-get($colors, "orange");
+                background-color: map-get($colors, 'orange' );
                 padding: 8px;
                 border-radius: 40px 0px 40px ;
                 width: 80%;
 
 
-                // & h5,p{
-                // // position: relative;
-
-                //  }
+                & h5{
+                    color: rgb(255, 255, 255);
+                 }
+                 & p{
+                    color:antiquewhite;
+                    text-align: start;
+                    text-indent: -55px;
+                    padding-left: 60px;
+                    
+                 }
+     
             }
            
         }

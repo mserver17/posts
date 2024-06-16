@@ -21,6 +21,7 @@
 html, body{ 
     margin: 0px;
     padding: 0px;
+    height: 100%;
 }
 #app{
     font-family: Arial, sans-serif;
@@ -28,7 +29,7 @@ html, body{
     flex-direction: column;
     min-height: 100vh;
 
-    & conteiner{
+    & .conteiner{
         padding: 0;
     }
     
@@ -38,12 +39,14 @@ html, body{
     display: flex;
     align-items: center;
     height: 40px;
+    width: 100%;
     max-height: 40px;
     justify-content:flex-end;
-    border-bottom: 1px solid orange ;
+    border-bottom: 1px solid orange;
+    position: fixed;
+    z-index: 5;
 
     & .contact-info{
-        background-color: #c6cfff;
         justify-content:flex-end;
         // z-index: 2;
         display:flex;
@@ -57,7 +60,8 @@ html, body{
             margin-left: 12px;
 
             &:hover{
-                color: rgb(0, 203, 203);
+                transition: 0.5s ease;
+                color: map-get($colors, 'orange' );
             }
         }
     }
@@ -67,38 +71,29 @@ html, body{
     .conteiner{
         display: flex;
         flex: 1;
-        align-items: stretch;
+        align-items: center;
         overflow: hidden;
         width: 100%;
+        height: calc(100vh - 70px); 
         flex-direction: row;
         max-width: 1840px;
         margin: 0 auto;
-
-        // flex-direction: column;
-        align-items: self-start;
-        justify-content: center;
-        height: 100%;
-        // width: 100%;
-        // padding: 20px;
-
+        
         .nav__wrapper{
-            flex: 1 1 25%;
+            // flex: 1 1 25%;
             background-color: map-get($colors, "navBarColor");
             padding: 6px;
+            height: 600px;
             width: auto;
             max-width: 230px;
+            position: fixed;
+            top: 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
             border-radius:  0px 30px 30px 0px;
-            // z-index: 3;
-
-
-            // position: fixed; /* Fixed positioning */
-            // top: 0; /* Align to the top of the viewport */
-            // left: 0; /* Align to the left of the viewport */
-            // bottom: 0; /* Extend to the bottom of the viewport */
-            overflow: auto; /* Add scroll if content overflows */
+            z-index: 3;
+            overflow-y: auto;
 
             .logo__block{
                 width: 20vb;
@@ -124,7 +119,8 @@ html, body{
                 font-style: normal;
 
                 &:hover{
-                    background-color: #8c9bff;
+                    transition: 0.3s ease-in;
+                    background-color: #7e64ff;
                     // border: 0.4px solid hwb(206 45% 0%);
                 }
 
@@ -136,7 +132,8 @@ html, body{
                     text-decoration: none;
                         
                     &:hover{
-                        color: rgb(0, 132, 132);
+                        transition: 0.4s ease;
+                        color: rgb(1, 106, 106);
                     }
                     span{
                         margin-left: 8px;
@@ -145,29 +142,52 @@ html, body{
             }
         }
         main {
-            flex: 1 1 65%;
-            width: 90%;
-            height: auto;
-            overflow: auto;
-            z-index: 0;
+            max-width: 1440px;
+            flex: 1;
+            margin: 40px 240px 0 190px; // Leave space for fixed nav and aside
+            
             &.Posts, &.AboutUs, &.Authorization, &.CreateNewPost{
-                // margin-left: 220px;
-                padding: 0 20px 0 20px;
+                // margin-right: 120px;
+                // width: 60%;
+                padding: 0 20px;
             }
+
+                @include media(max-width, 'lg') {
+                    &{
+                        max-width: 800px;
+                    }
+                }
             }
-        // &aside {
-        //     flex: 0 0 30px;
-        //     width: 300px;
-        //     max-width: 25%;
-        //     overflow: auto;
-        // }
+        .aside__wrapper {
+            position: fixed;
+            top: 40px;
+            right: 0;
+            width: auto;
+            max-width: 250px;
+            display: flex;
+            flex-direction:row-reverse;
+            align-items: center;
+            z-index: 3;
+            overflow-y: auto;
+
+            .aside {
+                background-color: map-get($colors, "asideColor");
+                padding: 10px;
+                border-radius: 10px 0px 0 10px;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
     footer {
-    background-color: map-get($colors, "headerFooterColor");
-    color: #205279;;
-    padding: 2px;
-    max-height: 30px;
-    text-align: center;
+        background-color: map-get($colors, "footerColor");
+        color: #ffffff;
+        padding: 20px;
+        margin-top: 40px;
+        height: 300px;
+        max-height: 350px;
+        text-align: center;
     }
 }
 

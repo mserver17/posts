@@ -58,26 +58,28 @@ function goToComments() {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
-  height: 100vh;
+  // justify-content: flex-start; // Ensure content starts from the top
+  min-height: 100vh; // Ensure home takes full height
   width: 100%;
+  overflow: auto; // Allow scrolling if content exceeds view height
 
   .image__container{
     width: 100%;
-    height: 800px;
+    height: 650px;
 
     .image__underflow{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: 100%;
     width: 100%;
     background-image: url('/src/assets/images/business-background.jpg'); /* Путь к вашему изображению */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
+    
     overflow: hidden;
 
         &::before {
@@ -88,15 +90,22 @@ function goToComments() {
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.5); /* Черный оверлей с прозрачностью 0.5 для теневого эффекта */
-      z-index: 1;
+      // z-index: 1;
       }
 
       .h1_main-screen {
       margin-bottom: 20px;
-      // font-family: "Montserrat", sans-serif;
       z-index: 2;
       position: relative;
-      color: antiquewhite;
+      color: map-get($colors, 'orange');
+      text-shadow: 1px 1px 0px #ffffff,
+          -1px 1px 0px #ffffff,
+          1px -1px 0px #ffffff,
+          -1px -1px 0px #ffffff,
+          1px 0px 0px #ffffff,
+          -1px 0px 0px #ffffff,
+          0px 1px 0px #ffffff,
+          0px -1px 0px #ffffff;;
       }
       .btn{
         z-index: 2;

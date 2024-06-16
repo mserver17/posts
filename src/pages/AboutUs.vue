@@ -2,7 +2,9 @@
     <!-- <div class="contr"> -->
     <div class="container__about">
         <div class="banner-list">
-            <video src="/src/assets/images/interactive-banner.mp4" class="banner" autoplay loop muted ></video>
+            <video src="/src/assets/images/banner.mp4" class="banner" autoplay loop muted >
+                <my-button></my-button>
+            </video>
         </div>
         <h1>About Us</h1>
     <p>Welcome to our IT information platform, where you can read posts on various IT topics.</p>
@@ -145,16 +147,19 @@ export default {
         .banner-list{
             width: 100%;
             height: auto;
-            max-width: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 20px;
-            position: relative;
             overflow: hidden;
+          
 
             .banner{
-                width:97%;
+                width: 100%;
                 height: auto;
                 display: block;
                 object-fit: cover;
+                
             }
         }
         .carousel{

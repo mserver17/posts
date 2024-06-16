@@ -4,3 +4,12 @@
     align-items: $align;
     flex-wrap: $wrap;
 }
+@mixin media($type, $breakpoint) {
+    @if $type == max-width {
+      @if $breakpoint == 'lg' {
+        @media (max-width: 1200px) { @content; }
+      }
+      // Добавьте другие точки останова по мере необходимости
+    }
+  }
+  

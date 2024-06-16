@@ -13,15 +13,16 @@ export default {
 <style scoped lang="scss">
 .btn{
   padding: 10px;
-  background-color: #788cff;
+  background-color: rgba(110, 80, 231, 0.961);
   color: #ffffff;
   align-self: flex-end;
-  border: 2px solid #9caaff ;
+  border: 1px solid #a06dff ;
   border-radius: 10px; 
   transition: transform 0.3s ease;
+  margin-right: 8px;
 
   &:hover{
-  background-color: #6179ff;
+  background-color: rgba(85, 56, 205, 0.961);
   color: #ffffff;
   transform: translateY(-3px);
   }

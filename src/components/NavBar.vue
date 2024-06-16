@@ -24,6 +24,10 @@
               <i class="fa-regular fa-user fa-lg"></i>
               <span>Autorization</span>
             </router-link>
+            <router-link class="router-link" to="/posts-with-vuex">
+              <i class="fa-regular fa-file-alt fa-lg"></i>
+              <span>Написать пост <br> Vuex</span>
+            </router-link>
       </nav>
 </template>
 <script>

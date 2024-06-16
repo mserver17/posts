@@ -42,56 +42,49 @@
   <style scoped lang="scss">
   @use '/src/assets/variables' as *;
   @use '/src/assets/mixins' as *;
-  .aside {
-    background-color: map-get($colors, "asideColor");
-    flex: 1 1 300px;
-    max-width: 300px; 
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    overflow: auto;
-  
-    &__nav {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      width: 100%;
-      height: 100%;
-  
-      &__item {
-        width: 100%;
-        background-color: #fff;
-        margin-bottom: 20px;
-        padding: 25px;
-        border: 2px solid #9caaff;
-        border-radius: 1% 13% / 1% 99%;
-        box-sizing: border-box;
-        overflow: hidden;
-        transition: transform 0.3s ease;
 
-        &:hover{
-            transform: translateY(-3px);
-        }
-  
-        &__link {
-          display: block;
-          margin-bottom: 10px;
-          text-decoration: none;
-          color: #095590;
-  
-          &:hover {
-            color: #2f93ff;
-          }
-        }
-  
-        p {
-          margin: 0;
-          padding: 0;
-          color: #333;
-        }
+.aside__nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+
+  &__item {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #9caaff;
+    border-radius: 1% 10% / 1% 20%;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+    &:hover{
+        transform: translateY(-3px);
+    }
+
+    &__link {
+      display: block;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #095590;
+
+      &:hover{
+        transition: 0.5s ease;
+        color: map-get($colors, 'orange' );
       }
     }
+
+    p {
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
   }
+}
+
   </style>
   
   
